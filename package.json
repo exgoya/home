@@ -4,8 +4,10 @@
   "description": "goyacommae",
   "main": "goya.js",
   "dependencies": {
+    "ejs": "^2.6.1",
     "express": "^4.16.4",
     "finalhandler": "^1.1.1",
+    "nodemon": "^1.19.0",
     "serve-favicon": "^2.5.0"
   },
   "devDependencies": {},
