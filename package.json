@@ -1,0 +1,17 @@
+{
+  "name": "gap",
+  "version": "1.0.0",
+  "description": "goyacommae",
+  "main": "goya.js",
+  "dependencies": {
+    "express": "^4.16.4",
+    "finalhandler": "^1.1.1",
+    "serve-favicon": "^2.5.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "goya",
+  "license": "ISC"
+}
