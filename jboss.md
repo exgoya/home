@@ -15,7 +15,7 @@
 11. Wildfly 연동시 참고사항
 
 ## 1. 개요 
-* GOLDILOCKS JDBC Driver 를 이용하여 Jboss, 와 연동하는 방법을 설명한다.
+* GOLDILOCKS JDBC Driver 를 이용하여 Jboss 와 연동하는 방법을 설명한다.
 * 설치 시, 환경이 맞지 않아 에러가 발생하는 경우 사용자가 설치해야한다.
 
 ###### [ 테스트 환경 ]
@@ -379,21 +379,25 @@
 ###### 이 챕터에서는 wildfly(16.0.0)와 jboss(6.1.1)의 설치시 차이점만 기술하도록 한다.
 
 #### 9 - 1. module 폴더구조가 바뀌었다.
-~/jboss-as-7.1.0.Final/modules/com/goldilocks/jdbc/main
-~/wildfly-16.0.0.Final/modules/system/layers/base/com/goldilocks/jdbc/main
+<h6>
+    
+    ~/jboss-as-7.1.0.Final/modules/com/goldilocks/jdbc/main
 
+    ~/wildfly-16.0.0.Final/modules/system/layers/base/com/goldilocks/jdbc/main
+
+</h6>
 #### 9 - 2. datasource property
 ###### datasource 추가시 \<connection-property name="URL"> 을 사용한다. (\<connection-url>를 사용하지 않는다.)
 ###### ex
 <h6>
     
-connection-property (datasource)
+###### connection-property (datasource)
 
     <connection-property name="URL">
         jdbc:goldilocks://192.168.0.111:22581/goldilocks
     </connection-property>
 
-XA datasource property
+###### XA datasource property
 
     <xa-datasource-property name="URL">
         jdbc:goldilocks://192.168.0.111:22581/goldilocks
