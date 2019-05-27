@@ -182,7 +182,7 @@
 ###### 0.0.0.0:8080 web server가 구동이된 모습이다.
 ![jboss_home](https://github.com/exgoya/home/blob/master/images/jboss_home.jpg)
 ###### 0.0.0.0:9990 Adminstration Console (add-user.sh 에서 설정한 id/pwd 를 입력하면 접속할 수 있다.
-![jboss_admin](https://github.com/exgoya/home/blob/master/images/jboss_admin.jpg
+![jboss_admin](https://github.com/exgoya/home/blob/master/images/jboss_admin.jpg)
 
 #### 5 - 3. shutdown
 
