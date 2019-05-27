@@ -178,3 +178,6 @@
     $ standalone.sh -Djboss.bind.address=0.0.0.0 -Djboss.bind.address.management=0.0.0.0
     
 </h6>
+
+###### 0.0.0.0:8080
+![jboss_home](https://github.com/exgoya/home/blob/master/images/jboss_home.jpg)
