@@ -2,17 +2,17 @@
 
 ## 목차 
 
-1. 개요 
-2. Jboss 사용자 생성 
-3. JAVA 설치 
-4. Jboss 설치 
-5. Jboss start 
-6. goldilocks 연동 
-7. Test 
-8. 배포 
-9. Check 
-10. XA property 
-11. Wildfly 연동시 주의사항
+#### 1. 개요 
+#### 2. Jboss 사용자 생성 
+#### 3. JAVA 설치 
+#### 4. Jboss 설치 
+#### 5. Jboss start 
+#### 6. goldilocks 연동 
+#### 7. Test 
+#### 8. 배포 
+#### 9. Check 
+#### 10. XA property 
+#### 11. Wildfly 연동시 주의사항
 
 ## 1. 개요 
 * GOLDILOCKS JDBC Driver 를 이용하여 Jboss, 와 연동하는 방법을 설명한다.
