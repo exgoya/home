@@ -12,7 +12,7 @@
 8. 배포 
 9. Check 
 10. XA Data Source 연결
-11. Wildfly 연동시 주의사항
+11. Wildfly 연동시 참고사항
 
 ## 1. 개요 
 * GOLDILOCKS JDBC Driver 를 이용하여 Jboss, 와 연동하는 방법을 설명한다.
@@ -374,7 +374,7 @@
 ###### http://localhost:9990
 ![xa_datasource](https://github.com/exgoya/home/blob/master/images/xa_datasource.jpg)
 
-## 9. Wildfly(16.0.0) 설치시 주의점
+## 9. Wildfly(16.0.0) 설치시 참
 ###### 이전의 jboss가 wildfly로 이름이 바뀌어 업데이트가 되고있다.
 ###### 이 챕터에서는 wildfly(16.0.0)와 jboss(6.1.1)의 설치시 차이점만 기술하도록 한다.
 
