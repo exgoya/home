@@ -25,7 +25,7 @@
 
 <h6>
 
-    OS Server   : CentOS Linux release 7.4.1708
+    OS Server   : CentOS Linux release 7.6.1810
     DATABASE    : Goldilocks 3.2.2 r27513
 
     JDK         : java version "1.7.0_211"
