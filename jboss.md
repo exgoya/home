@@ -11,7 +11,7 @@
 7. Test 
 8. 배포 
 9. Check 
-10. XA property 
+10. XA Data Source 연결
 11. Wildfly 연동시 주의사항
 
 ## 1. 개요 
@@ -315,7 +315,7 @@
     
 </h6>
 
-#### 6 - 2. index.jsp
+#### 7 - 2. index.jsp
 ###### index.jsp
 <h6>
     
@@ -325,12 +325,12 @@
     
 </h6>
 
-#### 6 - 3. 배포 ( deployments )
+#### 7 - 3. 배포 ( deployments )
 ###### manage deployments > add content > war file upload > enable click > check
 
 ![add_project](https://github.com/exgoya/home/blob/master/images/add_project.jpg)
 
-#### 6 - 3. Check
+#### 7 - 3. Check
 <h6>
     
     gSQL> select * from t1;
@@ -349,3 +349,54 @@
 
 ![check](https://github.com/exgoya/home/blob/master/images/check.jpg)
 
+## 8. XA Data Source 연결
+
+###### conf
+<h6>
+    
+    <xa-datasource jndi-name="java:jboss/datasources/goldilocksXADS" pool-name="goldilocksXADS" enabled="true" use-java-context="true">
+        <xa-datasource-property name="URL">jdbc:goldilocks://192.168.0.119:22125/test</xa-datasource-property>
+        <driver>goldilocks7</driver>
+        <security>
+            <user-name>test</user-name>
+            <password>test</password>
+        </security>
+    </xa-datasource>
+
+    <driver name="goldilocks7" module="com.goldilocks.jdbc">
+        <driver-class>sunje.goldilocks.jdbc.GoldilocksDriver</driver-class>
+        <xa-datasource-class>sunje.goldilocks.jdbc.GoldilocksXADataSource</xa-datasource-class>
+        <datasource-class>sunje.goldilocks.jdbc.GoldilocksDataSource</datasource-class>
+    </driver>
+    
+</h6>
+
+###### http://localhost:9990
+![xa_datasource](https://github.com/exgoya/home/blob/master/images/xa_datasource.jpg)
+
+## 9. Wildfly(16.0.0) 설치시 주의점
+###### 이전의 jboss가 wildfly로 이름이 바뀌어 업데이트가 되고있다.
+###### 이 챕터에서는 wildfly(16.0.0)와 jboss(6.1.1)의 설치시 차이점만 기술하도록 한다.
+
+#### 9 - 1. module 폴더구조가 바뀌었다.
+~/jboss-as-7.1.0.Final/modules/com/goldilocks/jdbc/main
+~/wildfly-16.0.0.Final/modules/system/layers/base/com/goldilocks/jdbc/main
+
+#### 9 - 2. datasource property
+###### datasource 추가시 \<connection-property name="URL"> 을 사용한다. (\<connection-url>를 사용하지 않는다.)
+###### ex
+<h6>
+    
+connection-property (datasource)
+
+    <connection-property name="URL">
+        jdbc:goldilocks://192.168.0.111:22581/goldilocks
+    </connection-property>
+
+XA datasource property
+
+    <xa-datasource-property name="URL">
+        jdbc:goldilocks://192.168.0.111:22581/goldilocks
+    </xa-datasource-property>
+    
+</h6>
