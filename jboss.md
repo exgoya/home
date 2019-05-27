@@ -1,20 +1,22 @@
 ### GOLDILOCKS - Jboss(Wildfly) 연동 가이드 
 
-## 목차 
+## 목차
 
-1. 개요 
-2. Jboss 사용자 생성 
-3. JAVA 설치 
-4. Jboss 설치 
-5. Jboss start 
-6. goldilocks 연동 
-7. Test 
-8. 배포 
-9. Check 
-10. XA Data Source 연결
-11. Wildfly 연동시 주의사항
 
-## 1. 개요 
+1. [개요](#개요)
+2. [Jboss 사용자 생성](#jboss-사용자-생성)
+3. [JAVA 설치](#java-설치)
+4. [Jboss 설치](#jboss-설치)
+5. [Jboss start](#jboss-start)
+6. [goldilocks 연동](#goldilocks-연동)
+7. [APP Test](#app-test)
+8. [배포](#배포)
+9. [Check](#check)
+10. [XA DataSource 연결](#xa-datasource-연결)
+11. [Wildfly 연동시 주의사항](#wildfly-연동시-주의사항)
+    
+
+## 개요
 * GOLDILOCKS JDBC Driver 를 이용하여 Jboss 와 연동하는 방법을 설명한다.
 * 설치 시, 환경이 맞지 않아 에러가 발생하는 경우 사용자가 설치해야한다.
 
@@ -34,7 +36,7 @@
 
 </h6>
 
-## 2. Jboss 사용자 생성
+## Jboss 사용자 생성
 
 #### 2 - 1. 사용자 계정을 생성한다.
 
@@ -67,7 +69,7 @@
     
 </h6>
  
-## 3. JDK(java develop kit) install
+## JDK(java develop kit) install
 ###### Jboss버전에 따라 알맞은 java version을 설치해야 한다.
 ###### Jboss 6.1.1 = jdk 1.7
 ###### Wildfly 17.0.0 = jdk 1.8
@@ -101,7 +103,7 @@
     
 </h6>
 
-## 4. Jboss install
+## Jboss install
 
 #### 4 - 1. Jboss as 7.1.1 download & 압축풀기
 
@@ -128,7 +130,7 @@
     
 </h6>
 
-## 5. Jboss 기동
+## Jboss 기동
 
 ###### 기동하기전 jboss-modules.jar 기본 모듈에 문제가 있으므로 fix된 버전의 module으로 교체해주도록 한다.
 ###### 관련 페이지 : https://stackoverflow.com/questions/48403832/javax-xml-parsers-factoryconfigurationerror-running-jboss-as-7-1-with-java-7-upd
@@ -195,7 +197,7 @@
     
 </h6>
 
-## 6. GOLDILOCKS 연동
+## GOLDILOCKS 연동
 
 #### 6 - 1. goldilocks jdbc driver copy
 
@@ -271,7 +273,7 @@
 #### 6 - 5. datasources 확인
 ![datasource](https://github.com/exgoya/home/blob/master/images/datasource.jpg)
 
-## 7. APP TEST
+## APP TEST
 
 #### 7 - 1. test.java
 ###### test.java
@@ -349,7 +351,7 @@
 
 ![check](https://github.com/exgoya/home/blob/master/images/check.jpg)
 
-## 8. XA Data Source 연결
+## XA Data Source 연결
 
 ###### conf
 <h6>
@@ -374,7 +376,7 @@
 ###### http://localhost:9990
 ![xa_datasource](https://github.com/exgoya/home/blob/master/images/xa_datasource.jpg)
 
-## 9. Wildfly(16.0.0) 설치시 주의사항
+## Wildfly(16.0.0) 설치시 주의사항
 ###### 이전의 jboss가 wildfly로 이름이 바뀌어 업데이트가 되고있다.
 ###### 이 챕터에서는 wildfly(16.0.0)와 jboss(6.1.1)의 설치시 차이점만 기술하도록 한다.
 
