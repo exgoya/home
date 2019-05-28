@@ -21,14 +21,13 @@
 
 ###### [ 테스트 환경 ]
 
-###### 1. Jboss 계정에 Jboss 를 설치하며, 계정은 Goldilocks glsnr(TCP) port 를 통해 Goldilocks 에 접속할 수 있어야 한다.
-###### 2. Jboss와 GOLDILOCKS의 연동과정을 다룬다. 다른 설정은 사용자가 설정해야 한다.
+###### * Jboss 계정에 Jboss 를 설치하며, 계정은 Goldilocks glsnr(TCP) port 를 통해 Goldilocks 에 접속할 수 있어야 한다.
+###### * Jboss 기동시 실행되는 port에 대한 방화벽이 열려있어야 한다. (default : 8080,9990,8443..)
 
 <h6>
 
     OS Server   : CentOS Linux release 7.6.1810
     DATABASE    : Goldilocks 3.2.2 r27513
-
     JDK         : java version "1.7.0_211"
     Jboss       : Jboss AS 7.1.1
     Wildfly     : wildfly 17.0.0
