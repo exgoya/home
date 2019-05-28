@@ -380,7 +380,7 @@
 ###### 이전의 jboss가 wildfly로 이름이 바뀌어 업데이트가 되고있다.
 ###### 이 챕터에서는 wildfly(16.0.0)와 jboss(6.1.1)의 설치시 차이점만 기술하도록 한다.
 
-#### 9 - 1. module 폴더구조가 바뀌었다.
+#### 11 - 1. module 폴더구조가 바뀌었다.
 
 <h6>
     
@@ -390,7 +390,7 @@
 
 </h6>
 
-#### 9 - 2. datasource property
+#### 11 - 2. datasource property
 ###### datasource 추가시 \<connection-property name="URL"> 을 사용한다. (\<connection-url>를 사용하지 않는다.)
 
 <h6>
