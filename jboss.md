@@ -1,4 +1,4 @@
-### GOLDILOCKS - Jboss(Wildfly) 연동 가이드 
+# GOLDILOCKS - Jboss(Wildfly) 연동 가이드 
 
 ## 목차
 
