@@ -7,7 +7,7 @@
 2. [Jboss 사용자 생성](#jboss-사용자-생성)
 3. [JAVA 설치](#java-설치)
 4. [Jboss 설치](#jboss-설치)
-5. [Jboss start](#jboss-start)
+5. [Jboss 기동](#jboss-aws-기동)
 6. [goldilocks 연동](#goldilocks-연동)
 7. [APP Test](#app-test)
 8. [배포](#배포)
@@ -69,7 +69,7 @@
     
 </h6>
  
-## JDK(java develop kit) install
+## JAVA 설치
 ###### Jboss버전에 따라 알맞은 java version을 설치해야 한다.
 ###### Jboss 6.1.1 = jdk 1.7
 ###### Wildfly 17.0.0 = jdk 1.8
@@ -103,7 +103,7 @@
     
 </h6>
 
-## Jboss install
+## Jboss 설치
 
 #### 4 - 1. Jboss as 7.1.1 download & 압축풀기
 
@@ -130,7 +130,7 @@
     
 </h6>
 
-## Jboss 기동
+## Jboss AWS 기동
 
 ###### 기동하기전 jboss-modules.jar 기본 모듈에 문제가 있으므로 fix된 버전의 module으로 교체해주도록 한다.
 ###### 관련 페이지 : https://stackoverflow.com/questions/48403832/javax-xml-parsers-factoryconfigurationerror-running-jboss-as-7-1-with-java-7-upd
@@ -167,7 +167,7 @@
     
 </h6>
 
-#### 5 - 2. jboss as 기동
+#### 5 - 2. jboss aws 기동
 
 ###### start (port옵션을 줌으로써 외부 접속이 허용이된다. 기본은 local만 허용)
 ###### conf를 수정하는 방법도 있다. -> $JBOSS_HOME/standalone/configuration/standalone.xml 수정 후 실행
@@ -327,12 +327,12 @@
     
 </h6>
 
-#### 7 - 3. 배포 ( deployments )
+## 배포
 ###### manage deployments > add content > war file upload > enable click > check
 
 ![add_project](https://github.com/exgoya/home/blob/master/images/add_project.jpg)
 
-#### 7 - 3. Check
+## Check
 <h6>
     
     gSQL> select * from t1;
@@ -351,7 +351,7 @@
 
 ![check](https://github.com/exgoya/home/blob/master/images/check.jpg)
 
-## XA Data Source 연결
+## XA DataSource 연결
 
 ###### conf
 <h6>
@@ -376,7 +376,7 @@
 ###### http://localhost:9990
 ![xa_datasource](https://github.com/exgoya/home/blob/master/images/xa_datasource.jpg)
 
-## Wildfly(16.0.0) 설치시 주의사항
+## Wildfly 연동시 주의사항
 ###### 이전의 jboss가 wildfly로 이름이 바뀌어 업데이트가 되고있다.
 ###### 이 챕터에서는 wildfly(16.0.0)와 jboss(6.1.1)의 설치시 차이점만 기술하도록 한다.
 
