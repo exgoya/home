@@ -6,15 +6,14 @@
 1. [개요](#개요)
 2. [Jboss 사용자 생성](#jboss-사용자-생성)
 3. [JAVA 설치](#java-설치)
-4. [Jboss 설치](#jboss-설치)
+4. [Jboss(7.1.1) 설치](#jboss-설치)
 5. [Jboss 기동](#jboss-aws-기동)
 6. [goldilocks 연동](#goldilocks-연동)
 7. [APP Test](#app-test)
 8. [배포](#배포)
 9. [Check](#check)
 10. [XA DataSource 연결](#xa-datasource-연결)
-11. [Wildfly 연동시 주의사항](#wildfly-연동시-주의사항)
-    
+11. [Wildfly(16.0.0) 연동시 주의사항](#wildfly-연동시-주의사항)
 
 ## 개요
 * GOLDILOCKS JDBC Driver 를 이용하여 Jboss 와 연동하는 방법을 설명한다.
@@ -71,7 +70,7 @@
  
 ## JAVA 설치
 ###### Jboss버전에 따라 알맞은 java version을 설치해야 한다.
-###### Jboss 6.1.1 = jdk 1.7
+###### Jboss 7.1.1 = jdk 1.7
 ###### Wildfly 17.0.0 = jdk 1.8
 
 
@@ -203,7 +202,7 @@
 
 <h6>
 
-    $ ~/jboss-as-7.1.0.Final/modules/com/goldilocks/jdbc/main
+    $ ~/jboss-as-7.1.1.Final/modules/com/goldilocks/jdbc/main
     $ ls
     goldilocks7.jar    module.xml
 
@@ -378,13 +377,13 @@
 
 ## Wildfly 연동시 주의사항
 ###### 이전의 jboss가 wildfly로 이름이 바뀌어 업데이트가 되고있다.
-###### 이 챕터에서는 wildfly(16.0.0)와 jboss(6.1.1)의 설치시 차이점만 기술하도록 한다.
+###### 이 챕터에서는 wildfly(16.0.0)와 jboss(7.1.1)의 설치시 차이점만 기술하도록 한다.
 
 #### 11 - 1. module 폴더구조가 바뀌었다.
 
 <h6>
     
-    ~/jboss-as-7.1.0.Final/modules/com/goldilocks/jdbc/main
+    ~/jboss-as-7.1.1.Final/modules/com/goldilocks/jdbc/main
 
     ~/wildfly-16.0.0.Final/modules/system/layers/base/com/goldilocks/jdbc/main
 
